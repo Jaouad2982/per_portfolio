@@ -1,11 +1,12 @@
 /* ========== Base / Layout ========== */
 :root {
-  --bg: #0b1220;
-  --panel: #111827;
-  --panel-2: #0f172a;
-  --text: #444;
-  --muted: #9ca3af;
-  --accent: #10b981;
+  --bg: #f9fafb;
+  --panel: #ffffff;
+  --panel-2: #f3f4f6;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #3b82f6;
+  --pColor: #fdfdfd;
 }
 
 * {
@@ -25,7 +26,7 @@ body {
 /* ======= Hero ======= */
 .hero {
   padding: 24px 20px 56px;
-  background: radial-gradient(white, transparent 30%);
+  background: radial-gradient(#f9fafb, #ffffff 60%);
 }
 
 .logo-image {
@@ -121,6 +122,7 @@ body {
   padding: 0 20px;
 }
 .projects h2 {
+  text-transform: uppercase;
   margin-bottom: 14px;
 }
 .grid {
@@ -131,26 +133,35 @@ body {
   transition: filter 0.25s ease;
 }
 .project-card {
-  color: #444;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  justify-content: space-between;
+  background-color: #1f2937;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   border-radius: 18px;
-  padding: 18px;
+  padding: 10px;
   cursor: pointer;
+  margin-top: 2rem;
   box-shadow: 0 10px 30px rgba(32, 31, 31, 0.25);
   transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s,
     opacity 0.25s;
 }
+
+.project-card img {
+  width: 50%;
+  border-radius: 12px;
+  object-fit: cover;
+}
 .project-card:hover {
   transform: translateY(-4px);
 }
-.project-card h3 {
+.project-card h4 {
+  color: var(--pColor);
   margin: 0 0 8px;
+  text-transform: uppercase;
 }
 .project-card p {
-  line-height: 1.7rem;
-  color: #444;
+  line-height: 1.9rem;
+  color: var(--pColor);
   font-weight: bold;
 }
 
@@ -198,6 +209,15 @@ body {
 }
 .project-card.expanded .close {
   display: grid;
+}
+
+footer {
+  height: 14rem;
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }
 
 /* Responsive */

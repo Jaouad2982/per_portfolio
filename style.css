@@ -256,6 +256,35 @@ footer {
   font-weight: bold;
 }
 
+.responsive-list-mobile {
+  background-color: var(--accent);
+  width: 100%;
+}
+
+.responsive-list-mobile .nav-list {
+  display: block;
+  flex-direction: column;
+  list-style: none;
+
+  height: 100vh;
+}
+
+.responsive-list-mobile .nav-list li {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 2.9rem;
+  text-transform: uppercase;
+}
+
+.responsive-list-mobile .nav-list a:active,
+.responsive-list-mobile .nav-list a:focus {
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.8;
+  font-size: 1.5rem;
+}
 /* Responsive */
 @media (max-width: 900px) {
   .main-header {
